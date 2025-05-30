@@ -15,6 +15,7 @@ export default function TextForm(props) {
         const lowText = text.toLowerCase();
         setText(lowText);
     }
+
     const clickClear = () => {
         const clearText = ""
         setText(clearText);
