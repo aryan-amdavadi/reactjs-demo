@@ -15,7 +15,10 @@ export default function TextForm(props) {
         const lowText = text.toLowerCase();
         setText(lowText);
     }
-
+    const clickCopy = () => {
+        document.getElementById("myBox").select();
+        navigator.clipboard.writeText(text)
+    }
     const clickClear = () => {
         const clearText = ""
         setText(clearText);
@@ -43,6 +46,7 @@ export default function TextForm(props) {
             <button className="btn btn-primary mx-3" onClick={clickUpper}>UpperCase</button>
             <button className="btn btn-primary mx-3" onClick={clickLower}>LowerCase</button>
             <button className="btn btn-primary mx-3" onClick={clickInvert}>InvertCase</button>
+            <button className="btn btn-primary mx-3" onClick={clickCopy}>Copy</button>
             <button className="btn btn-primary mx-3" onClick={clickClear}>Clear</button>
         </div>
         <div className="container my-3">
