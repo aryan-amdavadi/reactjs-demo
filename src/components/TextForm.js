@@ -38,7 +38,7 @@ export default function TextForm(props) {
     // setText("Hello");
     return (
         <>
-        <div>
+        <div className='container'>
             <div className="mb-3">
                 <label htmlFor="myBox" className="form-label my-3">{props.heading}</label>
                 <textarea className="form-control" value={text} placeholder='Enter Text Here!' onChange={clickUpperChange} id="myBox" rows="14"></textarea>

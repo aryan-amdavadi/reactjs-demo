@@ -1,25 +1,47 @@
 
 import './App.css';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import {
-  BrowserRouter as Router,
-  Switch,
+  // BrowserRouter as Router,
+  BrowserRouter,
   Route,
-  Link
+  Routes,
+  // NavLink,
+  // Link
 } from "react-router-dom"
 
 function App() {
   return (
     <>
-    <Navbar title='VENATOR'/>
-    <div className="container">
-      <TextForm heading="Enter The Text To Analyse." />
-    </div> 
-    {/* <div className="container my-3">
-      <About />
-    </div> */}
+   
+    
+    <BrowserRouter>
+      <Navbar title='VENATOR'/>
+      <Routes>
+        <Route path='/about' element={<About />} />
+      </Routes>
+      <Routes>
+        <Route path='/' element={<TextForm heading="Enter The Text To Analyse." />} />
+      </Routes>
+      <Routes>
+        <Route path='/TextForm' element={<TextForm heading="Enter The Text To Analyse." />} />
+      </Routes>
+    </BrowserRouter>
+    
+    
+
+        {/* <Routes> 
+        <Route path='/about'>
+          <About />
+        </Route>
+        <Route path='/'>
+          <TextForm heading="Enter The Text To Analyse." />
+        </Route>
+      </Routes> */}
+      
+    
     </>
   );
 } 
