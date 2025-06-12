@@ -43,11 +43,11 @@ export default function TextForm(props) {
                 <label htmlFor="myBox" className="form-label my-3">{props.heading}</label>
                 <textarea className="form-control" value={text} placeholder='Enter Text Here!' onChange={clickUpperChange} id="myBox" rows="14"></textarea>
             </div>
-            <button className="btn btn-primary mx-3" onClick={clickUpper}>UpperCase</button>
-            <button className="btn btn-primary mx-3" onClick={clickLower}>LowerCase</button>
-            <button className="btn btn-primary mx-3" onClick={clickInvert}>InvertCase</button>
-            <button className="btn btn-primary mx-3" onClick={clickCopy}>Copy</button>
-            <button className="btn btn-primary mx-3" onClick={clickClear}>Clear</button>
+            <button className="btn btn-primary mx-3 my-2" onClick={clickUpper}>UpperCase</button>
+            <button className="btn btn-primary mx-3 my-2" onClick={clickLower}>LowerCase</button>
+            <button className="btn btn-primary mx-3 my-2" onClick={clickInvert}>InvertCase</button>
+            <button className="btn btn-primary mx-3 my-2" onClick={clickCopy}>Copy</button>
+            <button className="btn btn-primary mx-3 my-2" onClick={clickClear}>Clear</button>
         </div>
         <div className="container my-3">
             <h1>Your Text Summary.</h1>
